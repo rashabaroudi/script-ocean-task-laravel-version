@@ -10,12 +10,6 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 
-        <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
-      defer
-    ></script>
-
-    
    
     </head>
     <body>
@@ -37,15 +31,40 @@
 
           $lists=array(
             "list1"=>array(
-                "title"=>"Quick start",
+                "title"=>"Quick links",
                 "sublist"=>array(
-                    "home","extensions"
+                    'Home',
+                'theme',
+                'extensions',
+                'pricing',
                 )
             ),
             "list2"=>array(
-                "title"=>"Quick start1",
+                "title"=>"about",
                 "sublist"=>array(
-                    "home","extensions"
+                    'careers',
+                'investor relations ',
+                'our brand',
+                'our history',
+                'accessibility',
+                'press and media',
+                )
+            ),
+            "list3"=>array(
+                "title"=>"support and resources",
+                "sublist"=>array(
+                'FAQ',
+                'documentation ',
+                'blog',
+                'tutorials',
+                )
+            ),
+            "list4"=>array(
+                "title"=>"contact information",
+                "sublist"=>array(
+                'Email:info@example.com',
+                'Phone: +1 (123) 456-7890',
+                'Address: 123 Main Street,Anytown, USA',
                 )
             ),
           )

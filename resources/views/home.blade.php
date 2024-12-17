@@ -19,13 +19,23 @@
     <body class="bg-slate px-3 md:mx-auto flex flex-col justify-center items-center gap-[80px] ">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
-    <script>
-    const { animate, scroll } = Motion
-    </script>
+     
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+      defer
+    ></script>
+       
+    
+   
+    <!-- Alpine Plugins -->
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+ 
+ <!-- Alpine Core -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
-    <div class="mx-auto flex flex-col justify-center items-center gap-[80px]  ">
+       
+    
+    <div class="mx-auto flex flex-col justify-center items-center gap-[80px] " x-data>
     
         <x-layout>
 
@@ -57,7 +67,7 @@
    
     )
 @endphp
-    <x-hero/>
+    <x-hero />
     <x-headline title='Discover The Power of Ai' paragraph='Create stunning, professional designs effortlessly using our AI-driven tools. Let the AI handle the heavy lifting, so you can focus on your vision' style='text-center'/>
     <x-with-ease-section/>
     <x-portfolio-section/>
@@ -66,10 +76,6 @@
 
    <x-carousel :cards=$cardsData/> 
 
-   <!-- @push('scripts')
-   <script type="text/javascript" src="slick/slick.min.js"></script>
-   
-    @endpush -->
 </x-layout>
 </div>
 

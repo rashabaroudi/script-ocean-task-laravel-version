@@ -9,7 +9,7 @@
       class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0 h-[95px]"
       x-data="{ isOpen: false ,isActive:false}"
       @keydown.escape="isOpen = false,isActive=false"
-      :class="{ 'shadow-lg bg-slate' : isOpen , 'bg-transparent' : !isOpen}"
+      :class="{ 'shadow-lg bg-slate h-full m-auto flex-col justify-center' : isOpen , 'bg-transparent' : !isOpen}"
     >
 
  
@@ -17,6 +17,42 @@
   
       <h1 class='font-semibold text-[1.75rem] leading-[2.39rem] font-manrope capitalize '>logo</h1>
 
+
+      <div className='menu'  @click.away="isOpen = false"
+      x-show.transition="true">
+      <!-- Menu-->
+      <div
+        class="hidden md:flex flex-row justify-center items-center gap-16 "
+        :class="{ 'block shadow-3xl z-10': isOpen, 'hidden': !isOpen }"
+       
+      >
+        <ul
+          class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
+        >
+        @foreach($links as $key => $value)
+        <li  value="{{ $key }}" class="mr-3 capitalize font-manrope font-semibold text-sm lg:text-base pt-4 pb-4 pl-5 pr-5"
+           @click="isActive = true"
+          :class="{'border bg-black text-white rounded-2xl pt-4 pr-5 pb-4 pl-5 border-transparent ' :isActive,'bg-transparent':!isActive}"
+          >
+            <a
+              class="inline-block "
+              href="#"
+              @click="isOpen = false"
+              :class="{'w-full p-5 border border-b-black':isOpen}"
+              >{{  $value }}
+            </a>
+          </li> 
+        @endforeach 
+        </ul>
+
+            <div class='flex flex-row justify-center items-center gap-4 '>
+                <p class='font-semibold text-lg font-manrope capitalize text-semiBlack'>sign up</p>
+                @php
+                    $name='log in'
+                @endphp
+                <x-button :name="$name"/>
+             </div>
+</div>
 <!--   
       Toggle button (hidden on large screens) -->
       <button
@@ -43,38 +79,7 @@
           />
         </svg>
       </button>
-    <!-- {/* navbar menu */} -->
-    <div className='menu'>
-      <!-- Menu-->
-      <div
-        class="hidden md:flex flex-row justify-center items-center gap-16 "
-        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
-        @click.away="isOpen = false"
-        x-show.transition="true"
-      >
-        <ul
-          class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
-        >
-        @foreach($links as $key => $value)
-        <li  value="{{ $key }}" class="mr-3 capitalize font-manrope font-semibold text-sm lg:text-base pt-4 pb-4 pl-5 pr-5"
-           @click="isActive = true"
-          :class="{'border bg-black text-white rounded-2xl pt-4 pr-5 pb-4 pl-5 border-transparent ' :isActive,'bg-transparent':!isActive}"
-          >
-            <a
-              class="inline-block "
-              href="#"
-              @click="isOpen = false"
-              >{{  $value }}
-            </a>
-          </li> 
-        @endforeach 
-            </ul>
-            <div class='flex flex-row justify-center items-center gap-4 '>
-                <p class='font-semibold text-lg font-manrope capitalize text-semiBlack'>sign up</p>
-                @php
-                    $name='log in'
-                @endphp
-                <x-button :name="$name"/>
-             </div>
+  
+         
       </div>
     </nav>

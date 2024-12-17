@@ -19,3 +19,34 @@
    
   }
   
+
+
+  @keyframes 
+  scale-up-center{
+    0% {
+      transform:scale(.5)
+    }
+    100%{
+      transform:scale(1)
+    }
+  
+  }
+  @keyframes slide-right{
+    0%{
+      transform:translateX(0)
+    }
+    100%{
+      transform:translateX(100px)
+    }}
+
+
+    @keyframes rotate-scale-up{
+      0%{
+        transform:scale(1) rotateZ(0)
+      }
+      50%{transform:scale(2) rotateZ(180deg)}100%{transform:scale(1) rotateZ(360deg)}}
+
+    .scale-up-center{animation:scale-up-center 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+    .slide-right{animation:slide-right 1.2s cubic-bezier(.25,.46,.45,.94) both}
+    .slide-left{animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both}
+    .rotate-scale-up{animation:rotate-scale-up .65s linear both}

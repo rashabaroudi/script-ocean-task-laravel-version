@@ -4,9 +4,9 @@
     <img src='/assets/images/creative1.png' width='29.7%'/>
             <img src='/assets/images/creative2.png' width='24.79%'  class='absolute translate-y-[-230px] translate-x-[50px] sm:translate-x-[-205px] sm:translate-y-[110px] z-10'/>
           
-            <div class=' flex  flex-col justify-center gap-12 p-4 w-[38.95%] '>
+            <div class=' flex  flex-col justify-center gap-12 p-4 w-[38.95%] ' >
                 <x-headline title='Creative Portfolio' paragraph='Showcase your creativity with this stylish portfolio theme. Ideal for artists, designers, and photographers.' style="text-center"/>
-                <x-button name='Create My Portifiolio'/>
+                <x-button name='Create My Portifiolio' />
             </div>
     </div>
 </div>
